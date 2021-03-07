@@ -11,8 +11,8 @@
 
 // 01 “Write a program that consists of a while-loop that (each time around the loop) reads in two ints and then prints them. Exit the program when a terminating '|' is entered.”
 // 02 “Change the program to write out the smaller value is: followed by the smaller of the numbers and the larger value is: followed by the larger value.”
-//03 "Augment the program so that it writes the line the numbers are equal (only) if they are equal."
-//04 "Change the program so that it uses doubles instead of ints.”
+// 03 "Augment the program so that it writes the line the numbers are equal (only) if they are equal."
+// 04 "Change the program so that it uses doubles instead of ints.”
 
 int main()
 {
