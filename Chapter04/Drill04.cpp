@@ -27,11 +27,11 @@ int main()
     
         if (numbers.size() % 2 == 0)
         {
-            if (numbers[numbers.size()-2] > numbers[numbers.size()-1])
-                cout << "The smaller number is: " << numbers[numbers.size()-1] << " and the larger number is: " << numbers[numbers.size()-2] << '\n';
-            else if (numbers[numbers.size()-2] == numbers[numbers.size()-1])
-                cout << "The numbers are equal. (" << numbers[numbers.size()-1] << ", " << numbers[numbers.size()-2] << ") \n";
-            else cout << "The smaller number is: " << numbers[numbers.size()-2] << " and the larger number is: " << numbers[numbers.size()-1] << '\n';
+            if (numbers[numbers.size()-2.] > numbers[numbers.size()-1.])
+                cout << "The smaller number is: " << numbers[numbers.size()-1.] << " and the larger number is: " << numbers[numbers.size()-2.] << '\n';
+            else if (numbers[numbers.size()-2.] == numbers[numbers.size()-1.])
+                cout << "The numbers are equal. (" << numbers[numbers.size()-1.] << ", " << numbers[numbers.size()-2.] << ") \n";
+            else cout << "The smaller number is: " << numbers[numbers.size()-2.] << " and the larger number is: " << numbers[numbers.size()-1.] << '\n';
         }
     }
 }
