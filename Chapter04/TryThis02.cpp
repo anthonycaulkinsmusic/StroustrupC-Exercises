@@ -2,7 +2,7 @@
 
 // Stroustrup, Bjarne 
 // Programming: Principles and Practices Using C++
-// Chapter 04 Drill 01
+// Chapter 04 Drill 02
 
 #include "std_lib_facilities.h"
 
