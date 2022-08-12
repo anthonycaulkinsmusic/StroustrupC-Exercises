@@ -2,7 +2,7 @@
 
 // Stroustrup, Bjarne 
 // Programming: Principles and Practices Using C++
-// Chapter 04 Drill 04
+// Chapter 04 Drill 05
 
 #include "std_lib_facilities.h"
 // header file suggested by Stroustrup
@@ -18,26 +18,33 @@ int main()
 {
     vector <double> numbers;
     double number = 0.;
-    constexpr double min_dif = 0.01;
-    
+    constexpr double min_dif = 1.0/100.;
+
     cout << "Enter two numbers, and exit using the '|' symbol: \n";
-    
+
     while(cin >> number)
     {
         numbers.push_back(number);
-    
+        
         if (numbers.size() % 2 == 0)
         {
-            if (numbers[numbers.size()-2.] == numbers[numbers.size()-1.])
-                cout << "The numbers are equal. (" << numbers[numbers.size()-1.] << ", " << numbers[numbers.size()-2.] << ") \n";
+            double No1 = numbers[numbers.size()-2.];
+            double No2 = numbers[numbers.size()-1.];
             
-            else if ((numbers[numbers.size()-2.] - numbers[numbers.size()-1.] < min_dif) || (numbers[numbers.size()-1.] - numbers[numbers.size()-2.] < min_dif))
-                cout << "The numbers are almost equal. (" << numbers[numbers.size()-2.] << ", " << numbers[numbers.size()-1.] << ") \n";
+            if (No1 == No2)
+                cout << "The numbers are equal. (" << No1 << ", " << No2 << ") \n";
+            
+            else if ((No1>No2) && (((No1-No2) < min_dif)))
+                cout << "The smaller number is: " << No2 << " and the larger number is: " << No1 << '\n' << "The numbers are almost equal." << '\n';
+            
+            else if ((No2>No1) && (((No2-No1) < min_dif)))
+                cout << "The smaller number is: " << No1 << " and the larger number is: " << No2 << '\n' << "The numbers are almost equal." << '\n';
 
-            else if ((numbers[numbers.size()-1.] > numbers[numbers.size()-2.]) && (numbers[numbers.size()-1.]/numbers[numbers.size()-2.] > min_dif)) cout << "The smaller number is: " << numbers[numbers.size()-2.] << " and the larger number is: " << numbers[numbers.size()-1.] << '\n';
-            
-            else if ((numbers[numbers.size()-2.] > numbers[numbers.size()-1.]) && (numbers[numbers.size()-2.]/numbers[numbers.size()-1.] > min_dif))
-                cout << "The smaller number is: " << numbers[numbers.size()-1.] << " and the larger number is: " << numbers[numbers.size()-2.] << '\n';
+            else if (No1>No2)
+                cout << "The smaller number is: " << No2 << " and the larger number is: " << No1 << '\n';
+                
+            else if (No2>No1)
+                cout << "The smaller number is: " << No1 << " and the larger number is: " << No2 << '\n';
         }
     }
 }
